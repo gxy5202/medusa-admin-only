@@ -86,6 +86,6 @@ module.exports = defineConfig({
   },
   modules: {
     ...dynamicModules,
-    ...modules
+    // ...modules
   }
 });
