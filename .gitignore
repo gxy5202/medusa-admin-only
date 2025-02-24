@@ -3,6 +3,7 @@
 .DS_Store
 /uploads
 /node_modules
+/static
 yarn-error.log
 
 .idea
