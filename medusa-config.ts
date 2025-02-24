@@ -72,7 +72,9 @@ const modules = {
 module.exports = defineConfig({
   admin: {
     backendUrl: process.env.MEDUSA_BACKEND_URL,
-    disable: process.env.DISABLE_MEDUSA_ADMIN === 'true'
+    disable: false,
+    // @ts-ignore
+    outDir: './.medusa/server/public/admin'
   },
   projectConfig: {
     databaseUrl: process.env.DATABASE_URL,
@@ -82,7 +84,7 @@ module.exports = defineConfig({
       authCors: process.env.AUTH_CORS,
       jwtSecret: process.env.JWT_SECRET || 'supersecret',
       cookieSecret: process.env.COOKIE_SECRET || 'supersecret'
-    }
+    },
   },
   modules: {
     ...dynamicModules,

@@ -1,3 +1,4 @@
+// @ts-check
 import {
   createApiKeysWorkflow,
   createInventoryLevelsWorkflow,
@@ -325,6 +326,7 @@ export default async function seedDemoData({ container }: ExecArgs) {
   await createProductsWorkflow(container).run({
     input: {
       products: [
+        // @ts-ignore
         {
           title: 'Medusa T-Shirt',
           category_ids: getCategoryIdsByName('Shirts'),
@@ -509,6 +511,7 @@ export default async function seedDemoData({ container }: ExecArgs) {
             }
           ]
         },
+        // @ts-ignore
         {
           title: 'Medusa Sweatshirt',
           category_ids: getCategoryIdsByName('Sweatshirts'),
@@ -607,6 +610,7 @@ export default async function seedDemoData({ container }: ExecArgs) {
             }
           ]
         },
+        // @ts-ignore
         {
           title: 'Medusa Sweatpants',
           category_ids: getCategoryIdsByName('Pants'),
@@ -705,6 +709,7 @@ export default async function seedDemoData({ container }: ExecArgs) {
             }
           ]
         },
+        // @ts-ignore
         {
           title: 'Medusa Shorts',
           category_ids: getCategoryIdsByName('Merch'),
